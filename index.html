@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head> 
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PD9JGYMJ8N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PD9JGYMJ8N');
+</script>
+    <!-- Event snippet for Переход с вкладки Home conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+    <script>
+        function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+            window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-11261293804/ARwyCPCXyb0YEOzp5vkp',
+            'event_callback': callback
+        });
+        return false;
+        }
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="description" content="A free web app for COMTRADE analysis and relay protection calculations">
+    <!-- <meta name="description" content="Simplify relay protection engineering with RelayHelper's tools to analyze COMTRADE files, evaluate distance protection, and streamline complex number calculations. Stay updated with new features and share your feedback to help us improve.">
+
+    <meta name="description" content="Enhance relay protection engineering efficiency with RelayHelper's tools for COMTRADE file analysis, distance protection evaluation, and streamlined complex number calculations. Provide feedback and stay updated for an improved experience.">
+
+    <meta name="description" content="Analyze and interpret COMTRADE files effortlessly with RelayHelper's tools. Gain insights from waveform data and fault records, enhancing your relay protection engineering experience. Stay updated with new features and share your feedback.">
+
+    <meta name="description" content="Evaluate the reliability of distance protection systems with RelayHelper. Calculate both electromechanical-based circular characteristics and digital terminals with polygonal characteristics for short circuits. Stay updated and share your feedback for continuous improvements.">
+
+    <meta name="description" content="Say goodbye to complex number headaches. Use RelayHelper's tool to streamline complex number calculations, making them quick and accurate. Simplify your relay protection engineering tasks with regular updates and valuable feedback sharing.">
+     -->
+    <meta property="og:url" content="http://relayhelper.vercel.app" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="COMTRADE file analysis" />
+    <meta property="og:description" content="A free web app for COMTRADE analysis and relay protection calculations" />
+    <meta property="og:image" content="shareIMG.jpg"/>
+    <meta property="og:image:width" content="900" />
+    <meta property="og:image:height" content="280" />
+
+    <title>RelayHelper</title>
+    <link rel="stylesheet" href = "design.css">
+    <link rel="stylesheet" href = "Tektur/Tektur-VariableFont_wdth,wght.ttf">
+    <!--link rel="icon" href="Icon/favicon.ico" sizes="any">
+    <link rel="shortcut icon" href="Icon/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="Icon/apple-touch-icon.png"-->
+    <link rel="icon" href="Icon/logo_RelayHelper-04.svg" type="image/svg+xml">
+    <link rel="manifest" href="site.webmanifest">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8820246634047346"
+    crossorigin="anonymous"></script>
+    <meta name="google-site-verification" content="DtOn6_81j1mmISscnCvINoc0VX8wbK0TXbQRvvESz7w" />
+</head>
+<body class = "background">
+    <div id = "promtContainer" class = "promtContainer">
+
+    </div>
+
+<div id = "header" class = "fixedHeader">
+    <nav class = "headerMenu">
+        <ul>
+            <li><a><img src = "menu.png" width = "32" height = "32"></a>
+                <ul>
+                    <li><a>Theme</a>
+                        <ul id = "themePicker">
+                            <li><a><input type = "radio" id = "i-darkBlue" checked name = "theme"> Dark blue</a></li>
+                            <li><a><input type = "radio" id = "i-lightBlue" name = "theme"> Light blue</a></li>
+                            <li><a><input type = "radio" id = "i-orange" name = "theme"> Orange</a></li>
+                        </ul>
+                    </li>
+                    <li><a>Follow us</a>
+                        <ul>
+                            <li><a href = "https://www.reddit.com/r/RelayHelper/">Reddit</a></li>
+                            <li><a href = "https://www.instagram.com/relayhelper/">Instagram</a></li>
+                            <li><a href = "https://www.youtube.com/@RelayHelper">YouTube</a></li>
+                            <li><a href = "https://www.facebook.com/profile.php?id=61551815552119">Facebook</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <h1 class = "citeTitle">RelayHelper</h1>
+    <p class = "citeTitle">1.6</p>
+    <div class = "headerTab">
+        <label>
+            <input type = "radio" name = "headerTab" id = "b-Home" checked>
+            <span>Home</span>
+        </label>
+    </div>
+    <div class = "headerTab">
+        <label>
+            <input type = "radio" name = "headerTab" id = "b-COMTRADE" onclick = "gtag_report_conversion()">
+            <span>COMTRADE</span>
+        </label>
+    </div>
+    <div class = "headerTab">
+        <label>
+            <input type = "radio" name = "headerTab" id = "b-RZA" onclick = "gtag_report_conversion()">
+            <span>Relay protection</span>
+        </label>
+    </div>
+    <div class = "headerTab">
+        <label>
+            <input type = "radio" name = "headerTab" id = "b-Calc" onclick = "gtag_report_conversion()">
+            <span>Complex calculator</span>
+        </label>
+    </div>
+    <div class = "headerTab">
+        <label>
+            <input type = "radio" name = "headerTab" id = "b-VD" onclick = "gtag_report_conversion()">
+            <span>VD</span>
+        </label>
+    </div>
+    <div class = "headerTab">
+        <label>
+            <input type = "radio" name = "headerTab" id = "b-Rate" onclick = "gtag_report_conversion()">
+            <span>Rate us</span>
+        </label>
+    </div>
+    <div class = "headerTab">
+        <label>
+            <input type = "radio" name = "headerTab" id = "b-Don" onclick = "gtag_report_conversion()">
+            <span>Donate</span>
+        </label>
+    </div>
+    <div class = "headerTab">
+        <label>
+            <input type = "radio" name = "headerTab" id = "b-Help" onclick = "gtag_report_conversion()">
+            <span>Manual</span>
+        </label>
+    </div>
+    <div class = "shown" id = "HomeMenu"><div style = "margin-left: 215px;display: inline-block"></div></div>
+    <div class = "hidden" id = "RZAMenu">
+        <div style = "margin-left: 215px;display: inline-block"></div>
+        <div class = "headerTab">
+            <label>
+                <input type = "radio" name = "protectionType" checked id = "b-DistanseP">
+                <span>Distanse Protection</span>
+            </label>
+        </div>
+        <div class = "headerTab">
+            <label>
+                <input type = "radio" name = "protectionType" id = "b-DifferentialP">
+                <span>Differential Protection</span>
+            </label>
+        </div>
+        <div></div>
+        <div style = "margin-left: 215px;display: inline-block"></div>
+        <div class = "inline" id = "DistancePMenu">
+            <nav class = "menu">
+                <ul>
+                    <li><a>Add Element</a>
+                        <ul>
+                            <li><a>RIO</a>
+                                <ul>
+                                    <li><a><input id = "i-isCalcRIO" type = "checkbox"> Impedance calculation</a></li>
+                                    <li><a><input id = "i-isRIO" type = "checkbox"> Zones</a></li>
+                                </ul>
+                            </li>
+                            <li><a>REX670</a>
+                                <ul>
+                                    <li><a><input id = "i-isCalc1ABB" type = "checkbox"> Impedance calculation</a></li>
+                                    <li><a>Quadrilateral</a>
+                                        <ul>
+                                            <li><a><input id = "i-isZM1" type = "checkbox"> ZM 1</a></li>
+                                            <li><a><input id = "i-isZM2" type = "checkbox"> ZM 2</a></li>
+                                            <li><a><input id = "i-isZM3" type = "checkbox"> ZM 3</a></li>
+                                            <li><a><input id = "i-isZM4" type = "checkbox"> ZM 4</a></li>
+                                            <li><a><input id = "i-isZM5" type = "checkbox"> ZM 5</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a><input id = "i-isLC" type = "checkbox"> Load Encroachment</a></li>
+                                </ul>
+                            </li>
+                            <li><a>7SAXXX</a>
+                                <ul>
+                                    <li><a><input id = "i-isCalc1Sim" type = "checkbox"> Impedance calculation</a></li>
+                                    <li><a>Zones</a>
+                                        <ul>
+                                            <li><a><input id = "i-isSimZ1" type = "checkbox"> Zone 1</a></li>
+                                            <li><a><input id = "i-isSimZ2" type = "checkbox"> Zone 2</a></li>
+                                            <li><a><input id = "i-isSimZ3" type = "checkbox"> Zone 3</a></li>
+                                            <li><a><input id = "i-isSimZ4" type = "checkbox"> Zone 4</a></li>
+                                            <li><a><input id = "i-isSimZ5" type = "checkbox"> Zone 5</a></li>
+                                            <li><a><input id = "i-isSimZ1B" type = "checkbox"> Zone 1B</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a><input id = "i-isSimLC" type = "checkbox"> Load Encroachment</a></li>
+                                </ul>
+                            </li>
+                            <li><a>L60</a>
+                                <ul>
+                                    <li><a><input id = "i-isCalc1L60" type = "checkbox"> Impedance calculation</a></li>
+                                    <li><a>Zones</a>
+                                        <ul>
+                                            <li><a><input id = "i-isL60Z1" type = "checkbox"> Zone 1</a></li>
+                                            <li><a><input id = "i-isL60Z2" type = "checkbox"> Zone 2</a></li>
+                                            <li><a><input id = "i-isL60Z3" type = "checkbox"> Zone 3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a><input id = "i-isL60LC" type = "checkbox"> Load Encroachment</a></li>
+                                </ul>
+                            </li>
+                            <li><a>ПМ РЗА L0ХХ</a>
+                                <ul>
+                                    <li><a><input id = "i-isCalc1Har" type = "checkbox"> Impedance calculation</a></li>
+                                    <li><a>Zones</a>
+                                        <ul>
+                                            <li><a><input id = "i-isHarZ1" type = "checkbox"> Zone 1</a></li>
+                                            <li><a><input id = "i-isHarZ2" type = "checkbox"> Zone 2</a></li>
+                                            <li><a><input id = "i-isHarZ3" type = "checkbox"> Zone 3</a></li>
+                                            <li><a><input id = "i-isHarZ4" type = "checkbox"> Zone 4</a></li>
+                                            <li><a><input id = "i-isHarZ5" type = "checkbox"> Zone 5</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a>ДЗ 2, КРС 1 (2, 3)</a>
+                                <ul>
+                                    <li><a><input id = "i-isCalc1dz" type = "checkbox"> Impedance calculation</a></li>
+                                    <li><a>Zones</a>
+                                        <ul>
+                                            <li><a><input id = "i-isC1" type = "checkbox"> Zone 1</a></li>
+                                            <li><a><input id = "i-isC2" type = "checkbox"> Zone 2</a></li>
+                                            <li><a><input id = "i-isC3" type = "checkbox"> Zone 3</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a>ЩДЕ 280Х</a>
+                                <ul>
+                                    <li><a><input id = "i-isCalc1SHDE" type = "checkbox"> Impedance calculation</a></li>
+                                    <li><a>Zones</a>
+                                        <ul>
+                                            <li><a><input id = "i-isShde1" type = "checkbox"> Zone 1</a></li>
+                                            <li><a><input id = "i-isShde2" type = "checkbox"> Zone 2</a></li>
+                                            <li><a><input id = "i-isShde3" type = "checkbox"> Zone 3</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a>Load Impedance</a>
+                                <ul>
+                                    <li><a><input id = "i-isSimLI" type = "checkbox"> Load Impedance</a></li>
+                                </ul>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li><a>Fault loop</a>
+                        <ul>
+                            <li><a><input id = "i-is1f" type = "radio" name = "mode">Phase - Ground</a></li>
+                            <li><a><input id = "i-is2f" type = "radio" name = "mode">Phase - Phase</a></li>
+                            <li><a><input id = "i-is3f" type = "radio" name = "mode">Phase - Phase 3Ph</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class = "hidden" id = "DifferentialPMenu">
+            <nav class = "menu">
+                <ul>
+                    <li><a>Add Element</a>
+                        <ul>
+                            <li><a><input id = "i-isRET670" type = "checkbox"> RET670</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class = "hidden" id = "CalcMenu"><div style = "margin-left: 215px;display: inline-block"></div></div>
+    <div class = "hidden" id = "VDMenu">
+        <div style = "margin-left: 215px;display: inline-block"></div>
+        <nav class = "menu">
+            <ul>
+                <li><a>VD Options</a>
+                    <ul>
+                        <li><a id = "addVDSample">Add measurment</a></li>
+                        <li><a><input type = "checkbox" id = "isVDSum"> Sum</a></li>
+                        <li><a id = "saveVDDocument">Save document</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class = "hidden" id = "COMTRADEMenu">
+        <div style = "margin-left: 215px;display: inline-block"></div>
+        <nav class = "menu">
+            <ul>
+                <li><a>File</a>
+                    <ul>
+                        <li><a id = "COMTRADEopen">Open COMTRADE file</a></li>
+                        <li><a id = "OpenCOMTRADEAdd">Open additional file</a></li>
+                        <li><a id = "AlignAdditional">Align additional file with cursors</a></li>
+                        <li><a id = "DownloadCOMTRADE">Save COMTRADE file</a></li>
+                        <li><a id = "a-download3" download>Save vector diagram</a></li>
+                        <li><a id = "a-download2" download>Save main window</a></li>
+                        <li><a id = "a-download4" download>Save protection window</a></li>
+                        <li><a id = "channelSound">Turn channel into sound file</a></li>
+                    </ul>
+                </li>
+                <li><a>Display</a>
+                    <ul>
+                        <li><a>COMTRADE visualisation</a>
+                            <ul>
+                                <li><a>Channels</a>
+                                    <ul id = "channelsListShow" class = "scrollable">
+            
+                                    </ul>
+                                </li>
+                                <li><a id="rescale">See full file</a></li>
+                                <li><a><input type = "checkbox" id = "i-showDigital" checked = "true"> Show digital channels</a></li>
+                                <li><a><input type = "checkbox" id = "i-showEmpty"> Show empty digital channels</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Vector diagram</a>
+                            <ul>
+                                <li><a>Channels</a>
+                                    <ul id = "channelsList" class = "scrollable">
+            
+                                    </ul>
+                                </li>
+                                <li><a><input type = "checkbox" id = "i-vectZoom"> Zooming</a></li>
+                                <li><a><input type = "checkbox" id = "i-vectOffset"> Center offset</a></li>
+                                <li><a><input type = "checkbox" id = "i-vectLength"> Real vector length</a></li>
+                            </ul>
+                        </li>
+                        <li><a><input type = "checkbox" checked id = "i-isC-3"> Display vector diagram</a></li>
+                        <li><a><input type = "checkbox" id = "i-isC-4"> Display relay protection</a></li>
+                    </ul>
+                </li>
+                <li><a>Calculations</a>
+                    <ul>
+                        <li><a>Add claculation channel</a>
+                            <ul>
+                                <li><a id = "AddZS">Add zero sequence channel</a></li>
+                                <li><a id = "AddRS">Add negative sequence channel</a></li>
+                                <li><a id = "AddSS">Add positive sequence channel</a></li>
+                                <li><a id = "AddCC">Add custom calculation channel</a></li>
+                                <li><a id = "AddFC">Add frequency channel</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Link with relay protection</a>
+                            <ul id = "linkChannelsList">
+    
+                            </ul>
+                        </li>
+                        <li><a>Restore channel</a>
+                            <ul>
+                                <li><a>Channel</a>
+                                    <ul id = "restoreChannelsList" class = "scrollable">
+    
+                                    </ul>
+                                </li>
+                                <li><a>Type</a>
+                                    <ul>
+                                        <li><a><input type = "radio" id = "i-restoreTypeMP" checked = "true" name = "restoreType"> Minus - Plus</a></li>
+                                        <li><a><input type = "radio" id = "i-restoreTypePP" name = "restoreType"> Cursor based</a></li>
+                                        <li><a><input type = "radio" id = "i-restoreTypeAMP" name = "restoreType"> Amplitude</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a>Base channel</a>
+                            <ul id = "baseChannelsList" class = "scrollable">
+
+                            </ul>
+                        </li>
+                        <li><a>Base channel angle on vector diagram<input type = "number" id = "i-COMTBase" value = "90" class = "textBox"></a></li>
+                        <li><a>Values type</a>
+                            <ul>
+                                <li><a><input type = "radio" id = "i-primary" checked = "true" name = "values"> Primary values</a></li>
+                                <li><a><input type = "radio" id = "i-secondary" name = "values"> Secondary values</a></li>
+                            </ul>
+                        </li>
+                        <li><a id = "COMTResCalc">Reset calculations</a></li>
+                    </ul>
+                </li>
+                <li><a>Marks</a>
+                    <ul>
+                        <li><a id = "AddValueMark">Add value mark</a></li>
+                        <li><a id = "AddTimePeriodMark">Add time period mark</a></li>
+                        <li><a id = "AddDigitalChannelOverprint">Add digital channel overprint</a></li>
+                        <li><a id = "AddTextComment">Add text comment</a></li>
+                        <li><a id = "ClearMarksForChannel">Clear marks for channel</a></li>
+                    </ul>
+                </li>
+                <li><a>Settings</a>
+                    <ul>
+                        <li><a>File encoder</a>
+                            <ul id = "encoder">
+                                <li><a><input type = "radio" id = "i-windows" checked = "true" name = "encoder"> Windows</a></li>
+                                <li><a><input type = "radio" id = "i-dos" name = "encoder"> Dos</a></li>
+                            </ul>
+                        </li>
+                        <li><a>COMTRADE visualisation width<input type = "number" id = "i-COMTVisWid" value = "1800" class = "textBox"></a></li>
+                        <li><a>Right frames size<input type = "number" id = "i-COMTVecSiz" value = "0" class = "textBox"></a></li>
+                        <li><a>Line width, px<input type = "number" class = "textBox" id = "i-lineWidth" value="3"></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class = "hidden" id = "RateMenu"><div style = "margin-left: 215px;display: inline-block"></div></div>
+    <div class = "hidden" id = "DonMenu"><div style = "margin-left: 215px;display: inline-block"></div></div>
+    <div class = "hidden" id = "HelpMenu"><div style = "margin-left: 215px;display: inline-block"></div></div>
+</div>
+<div id = "headerSpacer"></div>
+<div id = "Home" class = "shown">
+    <h2 class = "pageText">
+    Hi. We want to add the ability to open RIO files with settings, visualize them and link them with our protection calculators. So we need many RIO files with distance characteristics and differential (transformer, generator, motor, line, busbar). Another thing we need - we want to use AI for waveform restoration, for example, in case of CT saturation. So we need comtrade files with such cases with one requirement - so that the distorted signal can be calculated from other analog channels contained in the file. We will be very grateful if you have the opportunity to help and provide us with such files. Please email <a class="Links" href="mailto: rzahelper@gmail.com">rzahelper@gmail.com</a>.
+    <!--iframe width="1000" height="500" src="https://www.youtube.com/embed/YAMTzmTZo8w?si=c_J5QYrOKo8p6xCO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="1000" height="500" src="https://www.youtube.com/embed/tKOHZBwSoRs?si=Hvp5J6svcNaoxYFi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="1000" height="500" src="https://www.youtube.com/embed/6jcqsm_kySk?si=22mu7QMZeb99ewiv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="1000" height="560" src="https://www.youtube.com/embed/UEWZ4RbQqao?si=XME643YoPmHIcqJa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="1000" height="560" src="https://www.youtube.com/embed/ILE2XJX8b3E?si=iwmj7GVMzpKcCaYk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="1000" height="560" src="https://www.youtube.com/embed/h2lbElH4_r0?si=PPSX7DjMag7RIh33" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="1000" height="500" src="https://www.youtube.com/embed/LpGVvBLOwSI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="1000" height="560" src="https://www.youtube.com/embed/W0wN6Cr_jv4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe
+        <iframe width="1000" height="560" src="https://www.youtube.com/embed/i-o0C95zq4Q?si=DonZ906BF1LJ96pS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="1000" height="560" src="https://www.youtube.com/embed/LDIfpqgFjYg?si=FdsT0C6lNwcaQo7e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+        <iframe width="1000" height="560" src="https://www.youtube.com/embed/lFe6oSn7nq0?si=Ak13wMwMEZp1bq8Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="1000" height="560" src="https://www.youtube.com/embed/tKOHZBwSoRs?si=-iIxeO6L_jUolhlw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="1000" height="560" src="https://www.youtube.com/embed/v2Zj8HiFL6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        For more videos follow us on <a class="Links" href="https://www.youtube.com/@RelayHelper" target="_blank">YouTube</a>
+        <!--br \>
+        Welcome to RelayHelper: Simplifying Relay Protection Engineering!
+
+        RelayHelper is here to make the life of relay protection engineers easier and more efficient. Our web application offers a range of tools to help you analyze, calculate, and optimize relay protection systems for power transmission.
+        
+        What can you do with RelayHelper?
+        <hr>
+        <li>View COMTRADE Files: Seamlessly analyze and interpret COMTRADE files, a common format for recording and analyzing power system disturbances. Gain insights from waveform data, fault records, and other crucial information.
+        </li>
+        <hr>
+        <li>Evaluate Distance Protection: Assess the reliability and effectiveness of distance protection systems for all short circuits. Our calculators support both electromechanical-based circular characteristics and digital terminals with polygonal characteristics.
+        </li>
+        <hr>
+        <li>Simplify Complex Number Calculations: Say goodbye to complex number headaches. Our tool streamline complex number calculations, making them quick and accurate.
+        </li>
+        <hr>
+        <li>Stay Updated with New Features: We are continuously improving RelayHelper to meet your needs. Expect regular updates and new tools to enhance your relay protection engineering experience.
+        </li>
+        <hr>
+        <li>Share Your Feedback: We value your input! Feel free to share your feedback, suggestions, or report any bugs you encounter. Your input helps us refine our tools and provide a better experience.
+        </li>
+        <hr>
+        Experience the convenience and efficiency of RelayHelper, simplify your relay protection engineering tasks.-->
+        <!--iframe id = "homeDoc" width="1000" height="718" frameborder="0" marginheight="0" marginwidth="0"  src="https://docs.google.com/document/d/e/2PACX-1vR-n8UAf81-VJyOGHkzVeTEa5I2pSbhvLRxopb_SSNrirnAIpc54tYmCftXBJ2fxQrcb08DHA262tlk/pub?embedded=true"></iframe-->
+    </h2>
+    <!--script>
+        let target = document.getElementById("homeDoc");
+        var url = target.getAttribute("src");
+        if (url.startsWith("https://docs.google.com/document/d/")) {
+            // create div and replace iframe
+            let d = document.createElement('div');
+            d.classList.add("embedded-doc");
+             // optional
+            target.parentElement.replaceChild(d, target);
+
+
+            // CORS request
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.onload = function() {
+                // display response
+                d.innerHTML = xhr.responseText;
+                let styles = document.getElementsByTagName("style");
+                for (let j = 0; j < styles.length; j++) {
+                    if(styles[i].parentElement = d){
+                        let result = styles[j].innerHTML;
+                        result = result.replace(/background-color\s*:\s*[^;]+;/gi, "");
+                        result = result.replace(/margin-left\s*:\s*[^;]+;/gi, "");
+                        //result = result.replace(/font-family\s*:\s*[^;]+;/gi, "font-family: RHfonts");
+                        result = result.replace(/(\b(?:html|body|div|span|p|h1|h2|h3|h4|h5|h6|a|img|ul|ol|li|table|tr|td|th|form|input|textarea|button)\b)(?=\s|\{)/gi, '.doc-content $&')
+                        styles[j].innerHTML = result;
+                    }
+                }
+            };
+            xhr.send();
+        }
+    </script-->
+</div>
+<div id = "RZA" class = "hidden">
+    <div class = "inline" style = "max-height: calc(100vh - 200px);overflow-y: auto; min-width: calc(100vw - 700px); max-width: calc(100vw - 700px)">
+        <div id = "DistanseP">
+            <div id = "iCalculationsContainer"></div>
+            <hr class = "outerHr">
+            <div id = "zonesContainer"></div>
+            <hr class = "outerHr">      
+        </div>
+        <div id = "DifferentialP" class = "hidden">
+            <div id = "differentialContainer"></div>
+            <hr class = "outerHr">
+        </div>
+    </div>
+    <div class = "inline" style = "max-height: calc(100vh - 200px);overflow-y: auto; ">
+        <div class = "squareBox">
+            <div class = "innerBox">
+                <p class = "text">Scale</p>
+                <input type = "number" id = "i-Mult" value = "10" class = "textBox">
+            </div>
+            <div class = "innerBox">
+                <p class = "text">Grid</p>
+                <input type = "number" id = "i-Per" value = "10" class = "textBox">
+            </div>
+            <div class = "hidden">
+                <p class = "text">X</p>
+                <input type = "number" id = "i-X" value = "325" class = "textBox">
+            </div>
+            <div class = "hidden">
+                <p class = "text">Y</p>
+                <input type = "number" id = "i-Y" value = "325" class = "textBox">
+            </div>
+            <div class = "innerBox">
+                <a id = "a-download" download>Download jpg</a>
+            </div>
+        </div>
+        <canvas width = "650" height = "650" id = "c-1" class = "canvas"></canvas>
+    </div>
+</div>
+<div id = "Calc" class = "hidden">
+    <div class = "outerBox">
+        <div class = "innerBox" id = "pasteArea1">
+            <button id = "b-calcFr1" class = "button">Paste from result</button>
+            <hr class = "innerHr">
+            <p class = "text">A</p>
+            <input type = "number" id = "i-calcN1F1" class = "textBox">
+            <hr class = "innerHr">
+            <p class = "text">φ</p>
+            <input type = "number" id = "i-calcN2F1" class = "textBox">
+            <hr class = "innerHr">
+            <p class = "text">A</p>
+            <div id = "t-calcA" class = "textBox"></div>
+        </div>
+        <div class = "innerBox">
+            <button id = "b-calcFr2" class = "button">Paste from result</button>
+            <hr class = "innerHr">
+            <p class = "text">Re</p>
+            <input type = "number" id = "i-calcN1F2" class = "textBox">
+            <hr class = "innerHr">
+            <p class = "text">Im</p>
+            <input type = "number" id = "i-calcN2F2" class = "textBox">
+            <hr class = "innerHr">
+            <p class = "text">φ</p>
+            <div id = "t-calcF" class = "textBox"></div>
+
+        </div>
+        <div class = "innerBox">
+            <div class="pillar"><button id = "b-calcPlus" class = "button">+</button></div>
+
+            <div class="pillar"><button id = "b-calcMinus" class = "button">-</button></div>
+
+            <div class="pillar"><button id = "b-calcInc" class = "button">x</button></div>
+
+            <div class="pillar"><button id = "b-calcDec" class = "button">/</button></div>
+
+            <div class="pillar"><button id = "b-calcDel" class = "button">C</button></div>
+        </div>
+        <div class = "innerBox" id = "pasteArea2">
+            <button id = "b-calcFr3" class = "button">Paste from result</button>
+            <hr class = "innerHr">
+            <p class = "text">A</p>
+            <input type = "number" id = "i-calcN3F1" class = "textBox">
+            <hr class = "innerHr">
+            <p class = "text">φ</p>
+            <input type = "number" id = "i-calcN4F1" class = "textBox">
+            <hr class = "innerHr">
+            <p class = "text">Re</p>
+            <div id = "t-calcR" class = "textBox"></div>
+        </div>
+        <div class = "innerBox">
+            <button id = "b-calcFr4" class = "button">Paste from result</button>
+            <hr class = "innerHr">
+            <p class = "text">Re</p>
+            <input type = "number" id = "i-calcN3F2" class = "textBox">
+            <hr class = "innerHr">
+            <p class = "text">Im</p>
+            <input type = "number" id = "i-calcN4F2" class = "textBox">
+            <hr class = "innerHr">
+            <p class = "text">Im</p>
+            <div id = "t-calcI" class = "textBox"></div>
+        </div>
+    </div>
+</div>
+<div id = "VD" class = "hidden">
+    <hr class = "outerHr">
+    <div id = "vdContainer"></div>
+</div>
+<div id = "COMTRADE" class = "hidden">
+    <div class = "inline" style = "max-height: calc(100vh - 150px);overflow-y: auto;">
+        <!--div class = "outerBox">
+            <div class = "drop" id = "dropCOMTRADE">
+                <p>Drag COMTRADE files here or</p>
+                <div id = "dropCFG"></div>
+                <div id = "dropDAT"></div>
+            </div>
+        </div>
+        <div class = "outerBox">
+            <div class = "drop" id = "dropCOMTRADEAdd">
+                <p>Drag additional COMTRADE files here or</p>
+                <div id = "dropCFGAdd"></div>
+                <div id = "dropDATAdd"></div>
+                <button class = "openButton" id = "COMTRADEopenAdd">Open</button>
+            </div>
+        </div>
+        <hr class = "outerHr"-->
+        <div class = "squareBox" hidden>
+            <div class = "hidden">
+                <button id = "rescale" class = "button">Zoom out</button>
+            </div>
+            <div class = "hidden">
+                <p class = "text">Time</p>
+                <input type = "number" id = "i-COMTTime" value = "1" class = "textBox">
+            </div>
+        </div>
+        <hr class = "outerHr"hidden>
+        <div class = "inline">
+            <div class = "absolute">
+                <input id = "i-range1" type="range" step = "0.01" class = "range">
+                <input id = "i-range2" type="range" step = "0.01" class = "blueRange">
+            </div>
+            <canvas width = "0" id = "c-2" class = "canvas"></canvas>
+            <canvas width = "0" id = "c-5" class = "hidden"></canvas>
+        </div>
+    </div>
+    <div class = "inline" style = "max-height: calc(100vh - 150px);overflow-y: auto;">
+        <canvas width = "0" height = "0" id = "c-3" class = "relativeCanvas"></canvas>
+        <canvas width = "0" height = "0" id = "c-4" class = "hidden"></canvas>
+    </div>
+</div>
+
+
+
+<div id = "Rate" class = "hidden">
+    <h2 class = "pageText">You can contact us by mailing at <a class="Links" href="mailto: rzahelper@gmail.com">rzahelper@gmail.com</a>, calling <a class="Links" href="tel: +380677947385">+38-067-794-73-85</a> (WhatsApp, Telegram, Viber), or using the box below to send an incognito message. If you choose to use the box, please make sure to fill in "subject" field</h2>
+    <div class = "outerBox">
+    <form action="https://postmail.invotes.com/send"
+          method="post" id="email_form">
+        <p class = "text">Subject</p>
+        <input class = "textBox" type="text" name="subject" value = "Rating"/>
+        <hr class = "innerHr">
+        <p class = "text">Message</p>
+        <textarea class = "textArea" name="text"></textarea>
+        <hr class = "innerHr">
+        <input type="hidden" name="access_token" value="gkpd7xeae46gsrj62m4orrxe" />
+
+        <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+        <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+
+        <button class = "button" id="submit_form">Send</button>
+
+        <hr class = "innerHr">
+        <p class="text">Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
+    </form>
+    </div>
+
+</div>
+<div id = "Don" class = "hidden">
+    <h2 class = "pageText">Your Contribution Matters!<br />
+        Help us ensure the reliable and safe operation of power transmission systems. 
+        Your donation directly supports the development and maintenance of our relay protection application.</h2>
+    <div class="outerBox">
+        <p class = "text">Use this link</p>
+        <a href="https://www.paypal.com/donate/?hosted_button_id=4E6XYDRWM27CN">Donate</a>
+        <hr class = "innerHr">
+        <p class = "text">Or scan QR code</p>
+        <img src = "qrcode.png">
+    </div>
+</div>
+<div id = "Help" class = "hidden">
+    <h2 class = "pageText">
+    <iframe class = "styleableIframe" width="1000" height="718" frameborder="0" marginheight="0" marginwidth="0" src="https://docs.google.com/document/d/e/2PACX-1vRvEFxSVelcvaFS5IEdswVuT9m_IsLqvvjCPFziO2ZD8MCq9qTIKvOU3pb1btJIaNknNMuDSoFOQzr0/pub?embedded=true"></iframe>
+    </h2>
+</div>
+<!--script type = "module" src="https://unpkg.com/wavencoder"></script-->
+<script src = "RioReader.js"></script>
+<script src = "RelayProtection.js"></script>
+<script src = "VD.js"></script>
+<script src = "COMTRADE.js"></script>
+<script src = "COMTRADEVisualiser.js"></script>
+<script src = "engine.js"></script>
+<script>
+    // get all iframes that were parsed before this tag
+    var iframes = document.getElementsByClassName('styleableIframe');;
+
+    for (let i = 0; i < iframes.length; i++) {
+        var url = iframes[i].getAttribute("src");
+        if (url.startsWith("https://docs.google.com/document/d/")) {
+            // create div and replace iframe
+            let d = document.createElement('div');
+            d.classList.add("embedded-doc");
+            //d.innerHTML = iframes[i].contentWindow.document.body.innerHTML // optional
+            iframes[i].parentElement.replaceChild(d, iframes[i]);
+
+
+            // CORS request
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url, true);
+            xhr.onload = function() {
+                // display response
+                d.innerHTML = xhr.responseText;
+                let styles = document.getElementsByTagName("style");
+                for (let j = 0; j < styles.length; j++) {
+                    if(styles[i].parentElement = d){
+                        let result = styles[j].innerHTML;
+                        result = result.replace(/background-color\s*:\s*[^;]+;/gi, "");
+                        result = result.replace(/margin-left\s*:\s*[^;]+;/gi, "");
+                        //result = result.replace(/font-family\s*:\s*[^;]+;/gi, "font-family: RHfonts");
+                        result = result.replace(/(\b(?:html|body|div|span|p|h1|h2|h3|h4|h5|h6|a|img|ul|ol|li|table|tr|td|th|form|input|textarea|button)\b)(?=\s|\{)/gi, '.doc-content $&')
+                        styles[j].innerHTML = result;
+                    }
+                }
+            };
+            xhr.send();
+        }
+    }
+</script>
+<script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
